@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co jsem to vlastně za (podvratný) živel?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem 1rem 4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      background: #f0f0f0;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 2rem;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .error {
+      display: none;
+      color: #d60000;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    .error.show {
+      display: block;
+    }
+
+    .button-muj {
+      background-color: transparent;
+      color: #000 !important;
+      border: 1px solid #000;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none !important;
+      display: inline-block;
+      font-size: 18px;
+      margin: 1.5rem auto;
+      font-weight: 400 !important;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+
+    .button-muj:hover {
+      background-color: black;
+      color: white !important;
+    }
+
+    @media (max-width: 600px) {
+      .button-muj {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    #rozstrel {
+      display: none;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 2px dashed #000;
+    }
+
+    #rozstrel legend {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>LUNAPARK ŽIVLŮ<br><small>neboli: „Co jsem to vlastně za (podvratný) živel?“</small></h1>
+<p>Sedm otázek, sedm pošramocených zrcadel.<br>
+Odpovědi? Spíš otisky šepotu v rosolovité realitě.</p>
+
+  <h1>Co jsem to vlastně za (podvratný) živel?</h1>
+  <form id="quiz-form">
+    <!-- Otázky 1–7 – stejné jako dřív -->
+    <fieldset>
+      <legend>1. Kam tě to táhne?</legend>
+      <label><input type="radio" name="q1" value="země"> Do lesa, hlínu mezi prsty</label>
+      <label><input type="radio" name="q1" value="voda"> K řece, poslouchat ticho</label>
+      <label><input type="radio" name="q1" value="vzduch"> Do větru, na kopec</label>
+      <label><input type="radio" name="q1" value="oheň"> K ohni, jiskřit</label>
+      <label><input type="radio" name="q1" value="duch"> Do mezisvětí, neptat se</label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Jaké boty nosíš?</legend>
+      <label><input type="radio" name="q2" value="země"> Robustní a pohodlné</label>
+      <label><input type="radio" name="q2" value="voda"> Měkké, lehké, klouzavé</label>
+      <label><input type="radio" name="q2" value="vzduch"> Bosky nebo jakékoli</label>
+      <label><input type="radio" name="q2" value="oheň"> Výrazné a dramatické</label>
+      <label><input type="radio" name="q2" value="duch"> Neviditelné nebo žádné</label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Co tě nejvíc uklidní?</legend>
+      <label><input type="radio" name="q3" value="země"> Dotek kamene</label>
+      <label><input type="radio" name="q3" value="voda"> Zvuk deště</label>
+      <label><input type="radio" name="q3" value="vzduch"> Vítr ve vlasech</label>
+      <label><input type="radio" name="q3" value="oheň"> Plamen svíčky</label>
+      <label><input type="radio" name="q3" value="duch"> Ticho mezi myšlenkami</label>
+    </fieldset>
+    <fieldset>
+      <legend>4. Jak bys popsala své šperky?</legend>
+      <label><input type="radio" name="q4" value="země"> Hmotné, s texturou</label>
+      <label><input type="radio" name="q4" value="voda"> Tekuté linie, jemnost</label>
+      <label><input type="radio" name="q4" value="vzduch"> Lehkost a asymetrie</label>
+      <label><input type="radio" name="q4" value="oheň"> Divoké a jiskřivé</label>
+      <label><input type="radio" name="q4" value="duch"> Nejasné, zvláštní</label>
+    </fieldset>
+    <fieldset>
+      <legend>5. Co zní jako tvůj výrok?</legend>
+      <label><input type="radio" name="q5" value="země"> „Stabilita je síla.“</label>
+      <label><input type="radio" name="q5" value="voda"> „Proměna je přirozenost.“</label>
+      <label><input type="radio" name="q5" value="vzduch"> „Nevím, ale letím.“</label>
+      <label><input type="radio" name="q5" value="oheň"> „Jsem oheň, ne omluva.“</label>
+      <label><input type="radio" name="q5" value="duch"> „Jsem tady i nejsem.“</label>
+    </fieldset>
+    <fieldset>
+      <legend>6. Kam zmizíš, když nechceš být vidět?</legend>
+      <label><input type="radio" name="q6" value="země"> Do lesa nebo pod deku</label>
+      <label><input type="radio" name="q6" value="voda"> Do vany, pod hladinu</label>
+      <label><input type="radio" name="q6" value="vzduch"> Do mraků a myšlenek</label>
+      <label><input type="radio" name="q6" value="oheň"> Do výbuchu nebo pryč</label>
+      <label><input type="radio" name="q6" value="duch"> Prostě zmizím, jak dým</label>
+    </fieldset>
+    <fieldset>
+      <legend>7. Co z Tebe zbyde?</legend>
+      <label><input type="radio" name="q7" value="země"> Stopa v blátě</label>
+      <label><input type="radio" name="q7" value="voda"> Vlhko v koutku</label>
+      <label><input type="radio" name="q7" value="vzduch"> Smějící se šustění</label>
+      <label><input type="radio" name="q7" value="oheň"> Popel a ohořelá vzpomínka</label>
+      <label><input type="radio" name="q7" value="duch"> Vjem bez důkazu</label>
+    </fieldset>
+    <div class="error" id="error-msg">Nezlob se, ale aby Ti živel něco prozradil, musíš odpovědět na všechno!</div>
+    <button type="submit" class="button-muj">Odhal mi můj živel, ať se nezblázním</button>
+    <div id="rozstrel"></div>
+  </form>
+  <script src="https://aoooo-art.github.io/zivlovy-kviz/rozstrel-script.js"></script>
+</body>
+</html>
