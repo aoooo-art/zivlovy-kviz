@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co jsem to vlastně za (podvratný) živel?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem 1rem 4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      background: #fffef8;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 2rem;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .error {
+      display: none;
+      color: #d60000;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    .error.show {
+      display: block;
+    }
+
+    .button-muj {
+      background-color: transparent;
+      color: #000 !important;
+      border: 1px solid #000;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none !important;
+      display: inline-block;
+      font-size: 18px;
+      margin: 1.5rem auto;
+      font-weight: 400 !important;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+
+    .button-muj:hover {
+      background-color: black;
+      color: white !important;
+    }
+
+    @media (max-width: 600px) {
+      .button-muj {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Co jsem to vlastně za (podvratný) živel?</h1>
+  <form id="quiz-form">
+    <fieldset>
+      <legend>1. Co tě budí ze spaní?</legend>
+      <label><input type="radio" name="q1" value="země"> Krabice, co se samy skládají</label>
+      <label><input type="radio" name="q1" value="voda"> Mokrá tlama neexistujícího psa</label>
+      <label><input type="radio" name="q1" value="vzduch"> Průvan z jiné dimenze</label>
+      <label><input type="radio" name="q1" value="oheň"> Světlo zpod víček</label>
+      <label><input type="radio" name="q1" value="duch"> Zvuk, co neexistuje, ale víš, že ano</label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Tvoje tajná zbraň?</legend>
+      <label><input type="radio" name="q2" value="země"> Cihla ve svetru</label>
+      <label><input type="radio" name="q2" value="voda"> Bublina výmluv</label>
+      <label><input type="radio" name="q2" value="vzduch"> Lanko ke hvězdám</label>
+      <label><input type="radio" name="q2" value="oheň"> Výbuch v kabelce</label>
+      <label><input type="radio" name="q2" value="duch"> Pohled za roh reality</label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Jaké bys si vybrala převtělení?</legend>
+      <label><input type="radio" name="q3" value="země"> Opuštěný kaštan ve špajzu</label>
+      <label><input type="radio" name="q3" value="voda"> Ryba ve sklenici vína</label>
+      <label><input type="radio" name="q3" value="vzduch"> Balónek, co uletěl a nelituje</label>
+      <label><input type="radio" name="q3" value="oheň"> Plamen svíčky</label>
+      <label><input type="radio" name="q3" value="duch"> Záblesk v cizí vzpomínce</label>
+    </fieldset>
+    <fieldset>
+      <legend>4. V dětství jsi měla...</legend>
+      <label><input type="radio" name="q4" value="země"> Zahradní lopatku jako totem</label>
+      <label><input type="radio" name="q4" value="voda"> Hadr na zrcadlo jako kámoše</label>
+      <label><input type="radio" name="q4" value="vzduch"> Hnízdo z plyšáků na lustru</label>
+      <label><input type="radio" name="q4" value="oheň"> Škrtátko místo kartáčku</label>
+      <label><input type="radio" name="q4" value="duch"> Neviditelného dvojníka</label>
+    </fieldset>
+    <fieldset>
+      <legend>5. Jako šperk bys byla...</legend>
+      <label><input type="radio" name="q5" value="země"> Masivní kámen v prstenu Absolutna</label>
+      <label><input type="radio" name="q5" value="voda"> Zmoklá ulita na krtinci</label>
+      <label><input type="radio" name="q5" value="vzduch"> Vatový tampón na stříbrném háčku</label>
+      <label><input type="radio" name="q5" value="oheň"> Zlatý zub děda Vševěda</label>
+      <label><input type="radio" name="q5" value="duch"> Ukradený diamant</label>
+    </fieldset>
+    <fieldset>
+      <legend>6. Jak se vyhýbáš nepříjemnostem?</legend>
+      <label><input type="radio" name="q6" value="země"> Zakopu je pod růže</label>
+      <label><input type="radio" name="q6" value="voda"> Rozpustím je v čaji</label>
+      <label><input type="radio" name="q6" value="vzduch"> Sfouknu je jak svíčku</label>
+      <label><input type="radio" name="q6" value="oheň"> Zatopím s nimi v krbu a ještě se ohřeju</label>
+      <label><input type="radio" name="q6" value="duch"> Rozumně jim vysvětlím, že neexistují</label>
+    </fieldset>
+    <fieldset>
+      <legend>7. Tvoje superschopnost je…</legend>
+      <label><input type="radio" name="q7" value="země"> Za každou cenu neuhnout</label>
+      <label><input type="radio" name="q7" value="voda"> Proměnit víno ve vodu</label>
+      <label><input type="radio" name="q7" value="vzduch"> Zmizet po anglicku</label>
+      <label><input type="radio" name="q7" value="oheň"> Proměnit chaos v ohňostroj</label>
+      <label><input type="radio" name="q7" value="duch"> Za sucha být neviditelná</label>
+    </fieldset>
+    <fieldset>
+      <legend>8. Co uvidíš, když se podíváš o půlnoci do zrcadla?</legend>
+      <label><input type="radio" name="q8" value="země"> Žížalu s korunou, stojící na hromadě brambor</label>
+      <label><input type="radio" name="q8" value="voda"> Kapra tiše žvýkajícího Tvůj výraz prázdnoty</label>
+      <label><input type="radio" name="q8" value="vzduch"> Zitřejší myšlenku, co jí uletělo letadlo</label>
+      <label><input type="radio" name="q8" value="oheň"> Jiskřičky kolem hlavy, jak ses bacila o rám</label>
+      <label><input type="radio" name="q8" value="duch"> Vůbec nic, je tma</label>
+    </fieldset>
+    <div class="error" id="error-msg">Nezlob, odpověz na všechno, nebo Ti nic neřeknu!</div>
+    <button type="submit" class="button-muj">Odhal mi můj živel, ať se nezblázním</button>
+  </form>
+  <script>
+    const form = document.getElementById("quiz-form");
+    const errorMsg = document.getElementById("error-msg");
+    const resultUrls = {
+      "země": "https://www.aoooo.art/zivel-zeme",
+      "voda": "https://www.aoooo.art/zivel-voda",
+      "vzduch": "https://www.aoooo.art/zivel-vzduch",
+      "oheň": "https://www.aoooo.art/zivel-ohen",
+      "duch": "https://www.aoooo.art/zivel-duch"
+    };
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const answers = {};
+      for (let i = 1; i <= 8; i++) {
+        const q = form.querySelector(`input[name="q${i}"]:checked`);
+        if (!q) {
+          errorMsg.classList.add("show");
+          errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        answers[q.value] = (answers[q.value] || 0) + 1;
+      }
+      let max = 0;
+      let result = "";
+      for (const key in answers) {
+        if (answers[key] > max) {
+          max = answers[key];
+          result = key;
+        }
+      }
+      window.top.location.href = resultUrls[result];
+    });
+  </script>
+</body>
+</html>
